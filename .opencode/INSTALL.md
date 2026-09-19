@@ -13,7 +13,7 @@ Add the pinned plugin to the V2 `plugins` array in `opencode.json` or
 {
   "plugins": [
     {
-      "package": "chrisbanes-skills@git+https://github.com/dambear/skills.git#2026.9.2-opencode-v2.1",
+      "package": "chrisbanes-skills@git+https://github.com/dambear/skills.git#2026.9.2-opencode-v2.2",
       "options": {
         "injectGuidance": false
       }

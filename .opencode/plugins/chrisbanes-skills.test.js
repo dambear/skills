@@ -7,7 +7,7 @@ import plugin, { loadSkills } from "./chrisbanes-skills.js";
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const skillsDir = path.resolve(__dirname, "../../skills");
 
-test("loads every packaged skill with its content and path", () => {
+test("loads every packaged skill with its content and location", () => {
   const skills = loadSkills(skillsDir);
   assert.equal(skills.length, 18);
   assert.equal(new Set(skills.map((skill) => skill.id)).size, skills.length);
@@ -16,7 +16,7 @@ test("loads every packaged skill with its content and path", () => {
   assert.equal(animations.name, "compose-animations");
   assert.match(animations.description, /Jetpack Compose motion/);
   assert.match(animations.content, /^# Compose: animations/m);
-  assert.equal(animations.path, path.join(skillsDir, "compose-animations", "SKILL.md"));
+  assert.equal(animations.location, path.join(skillsDir, "compose-animations", "SKILL.md"));
 });
 
 test("translates explicit-only frontmatter to V2 autoinvoke metadata", () => {

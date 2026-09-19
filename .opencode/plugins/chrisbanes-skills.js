@@ -43,7 +43,7 @@ export const parseSkill = (skillFile) => {
     name: values.name,
     description: values.description,
     autoinvoke: values["disable-model-invocation"] === "true" ? false : undefined,
-    path: skillFile,
+    location: skillFile,
     content: source.slice(frontmatter[0].length).trim(),
   };
 };
