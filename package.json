@@ -34,8 +34,5 @@
       ],
       "remark-preset-lint-recommended"
     ]
-  },
-  "dependencies": {
-    "@opencode/plugin": "^2.0.10"
   }
 }

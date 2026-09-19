@@ -37,7 +37,7 @@ Or install as an OpenCode plugin:
 {
   "plugins": [
     {
-      "package": "chrisbanes-skills@git+https://github.com/dambear/skills.git#2026.9.2-opencode-v2.3",
+      "package": "chrisbanes-skills@git+https://github.com/dambear/skills.git#2026.9.2-opencode-v2.4",
       "options": { "injectGuidance": false }
     }
   ]

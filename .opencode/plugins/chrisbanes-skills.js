@@ -1,7 +1,6 @@
 import fs from "node:fs";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
-import { Plugin } from "@opencode/plugin";
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const skillsDir = path.resolve(__dirname, "../../skills");
@@ -60,7 +59,7 @@ export const loadSkills = (directory = skillsDir) => {
     .map(parseSkill);
 };
 
-export default Plugin.define({
+export default {
   id: "chrisbanes-skills",
   async setup(ctx) {
     let skills;
@@ -90,4 +89,4 @@ export default Plugin.define({
       });
     }
   },
-});
+};
