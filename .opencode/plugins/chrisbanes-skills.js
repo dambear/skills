@@ -38,11 +38,12 @@ export const parseSkill = (skillFile) => {
   }
   if (!values.description) throw new Error(`Skill description not found: ${skillFile}`);
 
+  const explicitOnly = values["disable-model-invocation"] === "true";
   return {
     id,
     name: values.name,
     description: values.description,
-    autoinvoke: values["disable-model-invocation"] === "true" ? false : undefined,
+    ...(explicitOnly ? { autoinvoke: false } : {}),
     location: skillFile,
     content: source.slice(frontmatter[0].length).trim(),
   };

@@ -23,7 +23,7 @@ test("translates explicit-only frontmatter to V2 autoinvoke metadata", () => {
   const skills = loadSkills(skillsDir);
   assert.equal(skills.find((skill) => skill.id === "implement-with-subagents").autoinvoke, false);
   assert.equal(skills.find((skill) => skill.id === "shepherd").autoinvoke, false);
-  assert.equal(skills.find((skill) => skill.id === "compose-state-and-effects").autoinvoke, undefined);
+  assert.equal("autoinvoke" in skills.find((skill) => skill.id === "compose-state-and-effects"), false);
 });
 
 test("registers skills and overrides an earlier skill with the same id", async () => {
