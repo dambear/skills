@@ -35,7 +35,12 @@ Or install as an OpenCode plugin:
 
 ```json
 {
-  "plugin": ["chrisbanes-skills@git+https://github.com/chrisbanes/skills.git"]
+  "plugins": [
+    {
+      "package": "chrisbanes-skills@git+https://github.com/dambear/skills.git#2026.9.2-opencode-v2.1",
+      "options": { "injectGuidance": false }
+    }
+  ]
 }
 ```
 

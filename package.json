@@ -4,11 +4,11 @@
   "description": "Skills for Kotlin, Android, JVM, and Jetpack Compose development by Chris Banes.",
   "type": "module",
   "main": ".opencode/plugins/chrisbanes-skills.js",
-  "repository": "https://github.com/chrisbanes/skills",
+  "repository": "https://github.com/dambear/skills",
   "license": "Apache-2.0",
   "scripts": {
     "lint": "remark --frail skills/ README.md evals/README.md",
-    "test": "python3 -m unittest scripts/test_release.py skills/run-github-project/scripts/test_rank_tickets.py skills/gradle-run/scripts/test_gradle_run.py skills/release-kotlin-library/scripts/test_release.py && python3 -m unittest discover -s evals/tests -p 'test_*.py'",
+    "test": "node --test .opencode/plugins/chrisbanes-skills.test.js && python3 -m unittest scripts/test_release.py skills/run-github-project/scripts/test_rank_tickets.py skills/gradle-run/scripts/test_gradle_run.py skills/release-kotlin-library/scripts/test_release.py && python3 -m unittest discover -s evals/tests -p 'test_*.py'",
     "evals:validate": "python3 evals/run.py validate",
     "evals:plan": "python3 evals/run.py plan --model gpt-5.6-sol --reasoning medium --judge-model gpt-5.6-sol --judge-reasoning high"
   },
@@ -34,5 +34,8 @@
       ],
       "remark-preset-lint-recommended"
     ]
+  },
+  "dependencies": {
+    "@opencode/plugin": "^2.0.10"
   }
 }
